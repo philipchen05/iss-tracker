@@ -8,7 +8,9 @@ function ISS(props) {
     var lon;
     // origin: lat = 315, lon = 280
     // top: 60px
-    // bottom: 500px     left-0px  right-600px  fffff top-[150px] left-[600px] 
+    // bottom: 500px
+    // left: 0px
+    // right: 600px
     if(latitude > 0)
         lat = Math.floor(315-2.8333*latitude);
     else
