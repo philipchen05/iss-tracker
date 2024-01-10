@@ -9,8 +9,8 @@ function Map() {
     useEffect(() => {
         try {
             const getCoordinates =  async () => {
-                const res = await axios.get("http://api.open-notify.org/iss-now.json")
-                setCoordinates(res.data.iss_position);
+                const res = await axios.get("https://api.wheretheiss.at/v1/satellites/25544")
+                setCoordinates(res.data);
                 setLoading(false)
             }
             
