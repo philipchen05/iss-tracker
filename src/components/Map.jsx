@@ -14,15 +14,14 @@ function Map() {
                 setLoading(false)
             }
             
-            getCoordinates();
+            setInterval(() => {
+                getCoordinates()
+            }, 3000)
+
         } catch(err) {
             console.log(err);
         }
     })
-
-    /*setInterval(() => {
-        getCoordinates();
-    }, 5000);*/
 
     return(
         <div className="relative w-[620px] h-[475px] map flex content-center justify-center">
