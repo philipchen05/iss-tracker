@@ -9,7 +9,7 @@ function Map() {
     useEffect(() => {   
         setInterval(() => {
             getCoordinates();
-        }, 3000)
+        }, 4000)
     }, [])
 
     const getCoordinates =  async () => {
