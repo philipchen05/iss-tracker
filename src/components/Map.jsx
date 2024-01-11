@@ -6,22 +6,23 @@ function Map() {
     const [coordinates, setCoordinates] = useState('');
     const [loading, setLoading] = useState(true);
     
-    useEffect(() => {
-        try {
-            const getCoordinates =  async () => {
-                const res = await axios.get("https://api.wheretheiss.at/v1/satellites/25544")
-                setCoordinates(res.data);
-                setLoading(false)
-            }
-            
-            setInterval(() => {
-                getCoordinates()
-            }, 3000)
-
-        } catch(err) {
-            console.log(err);
-        }
+    useEffect(() => {            
+        setTimeout(() => {
+            getCoordinates()
+            console.log("got coordinates")
+        }, 3000)
     })
+
+    const getCoordinates =  async () => {
+        await axios
+        .get("https://api.wheretheiss.at/v1/satellites/25544")
+        .then((res) => {
+            setCoordinates(res.data)
+            setLoading(false)})
+        .catch((err) => {
+            console.log(err)
+        })
+    }
 
     return(
         <div className="relative w-[620px] h-[475px] map flex content-center justify-center">
