@@ -2,12 +2,34 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+    font-family: "Zpix";
+    src: url("./components/zpix.ttf");
+}
+
+@font-face {
+    font-family: "DungGeunMo";
+    src: url("./components/DungGeunMo.ttf");
+}
+
 .map {
     background-image: url("./components/map.jpg");
 }
 
 body {
+    height: max(100vh, 650px);
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@media only screen and (orientation: portrait) {
+    body {
+        height: 100svh;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
