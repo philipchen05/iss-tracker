@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Title() {
+function Title(props) {
     return(
-        <h1 className="mt-10 text-center text-5xl relative font-display text-black">Where Is the ISS?</h1>
+        <h1 className="text-center text-5xl relative font-display text-black">{props.title}</h1>
     );
 }
 
