@@ -6,10 +6,11 @@ function Map() {
     const [coordinates, setCoordinates] = useState('');
     const [loading, setLoading] = useState(true);
     
-    useEffect(() => {   
+    useEffect(() => {
+        getCoordinates();
         setInterval(() => {
             getCoordinates();
-        }, 3500)
+        }, 3500);
     }, [])
 
     const getCoordinates =  async () => {
